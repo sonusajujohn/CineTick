@@ -5,6 +5,8 @@ const userModel = require('../model/userData');
 
 const router = express.Router();
 
+const superkey=process.env.JWT_SECRET;
+
 // Signup route
 router.post('/signup', async (req, res) => {
   const { username, email, password } = req.body;
@@ -47,7 +49,7 @@ router.post('/login', async (req, res) => {
     }
 
     // Create JWT token
-    const token = jwt.sign({ userId: user._id, role: user.role }, 'my_super_secret_key', { expiresIn: '1h' });
+    const token = jwt.sign({ userId: user._id, role: user.role }, superkey, { expiresIn: '1h' });
     return res.status(200).json({ token, role: user.role });
   } catch (error) {
     console.error(error);

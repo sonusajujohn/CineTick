@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const userModel = require('../model/userData'); // Import the User model
 
 // MongoDB connection string and admin credentials
-const mongoDB_URL = "mongodb+srv://sonusajujohn:haidasonu@cluster0.qwql7.mongodb.net/CineTickDB?retryWrites=true&w=majority&appName=Cluster0";
+const mongoDB_URL = process.env.MONGODB_URL;
 const adminEmail = "admin007@gmail.com";
 const adminPassword = "admin@123";
 
