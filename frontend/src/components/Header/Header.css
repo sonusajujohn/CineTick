@@ -1,0 +1,101 @@
+.header {
+    height: 39vw;
+    width: 88vw;
+    margin-top: 90px;
+    margin-left: -50px;
+    background: url('https://wheelchairtravel.org/wp-content/uploads/2020/03/film-festival-header.jpg') no-repeat center;
+    background-size: cover;
+    position: relative;
+    border-radius: 20px; 
+}
+
+#head2{
+    color: tomato;
+    font-weight: 600;
+    margin-left: 50px;
+    font-size: 4vw;
+}
+
+#but{
+    background: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top:270px;
+    right: 580px;
+    color: black;
+    border: 5px double black;
+    box-shadow: 2px 2px black;
+    background-color: aliceblue;
+    padding: 10px 30px;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+#but:hover {
+    background-color:tomato;
+    box-shadow: 2px 5px black;
+    transition: 0.5s;
+    color: aliceblue;
+}
+
+#para {
+    display: flex;
+    position: absolute;
+    color: rgb(255, 233, 233);
+    font-size: 1.4vw;
+    line-height: 1.6;
+    top: 32vw;
+    text-align:center;
+    left: 150px;
+    
+}
+
+@media (max-width:1050px){
+    .header{
+        margin-left: 30px;
+    }
+    #but{
+        margin-right: -205px;
+        margin-top: -100px;
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+    #para{
+        margin-left: -80px;
+    }
+}
+
+@media (max-width:900px){
+    .header{
+        margin-left: 25px;
+    }
+    #but{
+        margin-right: -280px;
+        margin-top: -120px;
+        padding: 5px 8px;
+        font-size: 10px;
+    }
+    #para{
+        margin-left: -80px;
+    }
+}
+
+@media (max-width:750px){
+    .header{
+        margin-left: 0px;
+    }
+    #but{
+        margin-right: 0px;
+        margin-top: 0px;
+        padding: 3px 8px;
+        font-size: 15px;
+    }
+    #para{
+        margin-left: -80px;
+    }
+}
+

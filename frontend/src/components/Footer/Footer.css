@@ -1,0 +1,134 @@
+/* Footer.css */
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 50px 20px;
+  margin-left: -155px;
+  width: 1522px;
+  margin-bottom: -32px;
+
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content-left,
+.footer-content-center,
+.footer-content-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-content-left img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.footer-content-left p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.footer-social-icons img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.footer-social-icons img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.footer-content-center h2,
+.footer-content-right h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: tomato;
+  font-weight: 600;
+}
+
+.footer-content-center ul,
+.footer-content-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content-center ul li,
+.footer-content-right ul li {
+  margin: 8px 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-content-center ul li:hover,
+.footer-content-right ul li:hover {
+  color: rgb(255, 203, 71);
+}
+
+hr {
+  border: 0.5px solid #444;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+  margin-left: 420px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 750px) {
+
+  .footer{
+    padding-left:100px;
+    width: 520px;
+    margin-top: 100px;
+  }
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .footer-content-left,
+  .footer-content-center,
+  .footer-content-right {
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .footer-social-icons {
+      justify-content: center;
+
+  }
+  .footer-content-left p{
+    margin-left: 50px;
+  }
+  .footer-copyright{
+    margin-left: 0px;
+  }
+
+}
+
+

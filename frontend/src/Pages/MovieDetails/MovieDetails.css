@@ -1,0 +1,143 @@
+.movie-details-container {
+    max-width: 900px;
+    margin-top: 70px;
+    margin-left: 150px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .movie-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .movie-info{
+    margin-left: 130px;
+  }
+  
+  .movie-info h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .movie-info p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .watch-trailer-button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: tomato ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .watch-trailer-button:hover {
+    background-color: rgb(161, 0, 0);
+    transition: 0.5s;
+  }
+  
+  .movie-rating {
+    text-align: center;
+  }
+  
+  .movie-poster {
+    width: 160px;
+    border-radius: 8px;
+  }
+  
+  .movie-options {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .like-button, .dislike-button {
+    background: none;
+    border: none;
+    color: black;
+    border: 2px solid tomato;
+    border-radius: 20px;
+    padding: 5px 12px;
+    cursor: pointer;
+  }
+
+  .like-button.selected {
+    background-color: rgba(205, 0, 0, 0.841); 
+    border:none;
+    color: white;
+  }
+
+  .like-button:hover {
+    background-color: rgba(255, 99, 71, 0.46);
+    color: black;
+    border: 2px solid maroon;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .dislike-button:hover{
+    background-color: rgba(255, 99, 71, 0.46);
+    color: black;
+    border: 2px solid maroon;
+    cursor: pointer;
+    transition: 0.5s;
+
+  }
+
+  .dislike-button.selected {
+    background-color: rgba(205, 0, 0, 0.841); 
+    border:none;
+    color: white;
+  }
+  
+  .location {
+    font-size: 18px;
+    margin-right: 20px;
+    color: #555;
+  }
+  .location:hover {
+    color: black;
+  }
+  
+  .showtimes {
+    padding: 20px;
+  }
+  
+  .showtimes h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .showtimes p {
+    margin: 5px 0;
+    color: #999;
+  }
+  
+  .showtime-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .showtime-button {
+    padding: 10px 20px;
+    background-color: rgba(255, 99, 71, 0.471);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .showtime-button:hover {
+    background-color: rgba(128, 0, 0, 0.596);
+    color: white;
+    transition: 0.5s;
+  }
