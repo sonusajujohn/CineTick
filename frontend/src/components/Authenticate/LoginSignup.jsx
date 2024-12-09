@@ -5,8 +5,8 @@ import './LoginSignup.css';
 import { assets } from '../../assets/assets';
 
 const LoginSignup = () => {
-  const [username, setUsername] = useState('');  // For username
-  const [email, setEmail] = useState('');  // For signup email
+  const [username, setUsername] = useState('');  // For signup username
+  const [email, setEmail] = useState('');  
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isRightPanelActive, setRightPanelActive] = useState(false);
@@ -17,12 +17,13 @@ const LoginSignup = () => {
       navigate('/');
   }
 
-  // Login handler (using username instead of email)
+//  LOGIN HANDLE 
+
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5000/auth/login', 
-        { username, password },  // Send username instead of email
+        { email, password },  // Send username instead of email
         { headers: { "Content-Type": "application/json" }}
       );
       const { token, role } = response.data;
@@ -77,7 +78,9 @@ const LoginSignup = () => {
     <div className="login-page">
       <button onClick={gotohome} id="backbut">Go Back To Home</button>
       <div className={`container ${isRightPanelActive ? 'right-panel-active' : ''}`} id="container">
+
         {/* Signup Form */}
+
         <div className="form-container sign-up-container">
           <form onSubmit={handleSignup}>
             <h1>Create Account</h1>
@@ -114,6 +117,7 @@ const LoginSignup = () => {
         </div>
 
         {/* Login Form */}
+
         <div className="form-container sign-in-container">
           <form onSubmit={handleLogin}>
             <h1>Sign In</h1>
@@ -123,10 +127,10 @@ const LoginSignup = () => {
               <img src={assets.twittericon} alt="Twittericon" className="social" />
             </div>
             <input
-              type="text"
-              placeholder="Username"  // Username field for login
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              type="email"
+              placeholder="Email"  // Username field for login
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
             <input

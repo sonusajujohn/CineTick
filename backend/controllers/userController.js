@@ -70,16 +70,15 @@ const loginUser = async (req, res) => {
             return res.json({ success: false, message: "Invalid email or password" });
         }
 
-        // Compare passwords
-        const match = await bcrypt.compare(password, user.password);
-        if (!match) {
+        // COMPARING PASSWORDS
+        const ismatch = await bcrypt.compare(password, user.password);
+        if (!ismatch) {
             return res.json({ success: false, message: "Invalid email or password" });
         }
 
         // Create JWT token
         const token = createToken(user._id);
 
-        // Respond with user data and token
         res.json({success: true,message: "Login successful"});
     } catch (error) {
         console.error(error);
